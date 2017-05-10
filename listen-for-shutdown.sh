@@ -18,7 +18,7 @@ case "$1" in
     ;;
   stop)
     echo "Stopping listen-for-shutdown.py"
-    killall listen-for-shutdown.py
+    pkill -f /usr/local/bin/listen-for-shutdown.py
     ;;
   *)
     echo "Usage: /etc/init.d/listen-for-shutdown.sh {start|stop}"
