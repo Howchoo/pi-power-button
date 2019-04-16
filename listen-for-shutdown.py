@@ -4,7 +4,7 @@
 from gpiozero import Button
 import subprocess
 
-button = Button(2)
+button = Button(3)
 
 button.wait_for_press()
 
