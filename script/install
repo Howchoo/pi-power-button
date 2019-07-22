@@ -5,14 +5,14 @@ set -e
 cd "$(dirname "$0")/.."
 
 echo "=> Installing shutdown listener...\n"
-sudo mv listen-for-shutdown.py /usr/local/bin/
+sudo cp listen-for-shutdown.py /usr/local/bin/
 sudo chmod +x /usr/local/bin/listen-for-shutdown.py
 
 echo "=> Starting shutdown listener...\n"
-sudo mv listen-for-shutdown.sh /etc/init.d/
+sudo cp listen-for-shutdown.sh /etc/init.d/
 sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 
 sudo update-rc.d listen-for-shutdown.sh defaults
 sudo /etc/init.d/listen-for-shutdown.sh start
 
-echo "Shutdown listner installed."
+echo "Shutdown listener installed."
