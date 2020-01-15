@@ -1,10 +1,11 @@
 # pi-power-button
 
-Scripts used in the [Pi power button guide](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi) on howchoo.
+Scripts used in our official [Raspberry Pi power button guide](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi).
 
 ## Installation
 
-1. Clone down this repo to your Raspberry Pi
-2. Run `script/install`
+1. [Connect to your Raspberry Pi via SSH](https://howchoo.com/g/mgi3mdnlnjq/how-to-log-in-to-a-raspberry-pi-via-ssh)
+1. Clone this repo: `git clone https://github.com/Howchoo/pi-power-button.git`
+1. Run the setup script: `./pi-power-button/script/install`
 
 That's it!
