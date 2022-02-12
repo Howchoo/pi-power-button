@@ -1,4 +1,4 @@
-# pi-power-button
+# pi-power-button - 3 seconds delay
 
 ## Details
 
