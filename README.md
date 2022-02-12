@@ -1,11 +1,12 @@
 # pi-power-button
 
-Scripts used in our official [Raspberry Pi power button guide](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi).
+## Details
+
+This software allows to turn on and off your raspberry. For turning off the raspberry you will need to hold the button for 3seconds. This makes unintentional turn offs or static current not turn off the raspberry randomly.
 
 ## Installation
 
-1. [Connect to your Raspberry Pi via SSH](https://howchoo.com/g/mgi3mdnlnjq/how-to-log-in-to-a-raspberry-pi-via-ssh)
-1. Clone this repo: `git clone https://github.com/Howchoo/pi-power-button.git`
+1. Clone this repo: `git clone https://github.com/ImpressiveTaste/pi-power-button`
 1. Optional: Edit line 9/10 in listen-for-shutdown.py to your preferred pin (Please see "Is it possible to use another pin other than Pin 5 (GPIO 3/SCL)?" below!)
 1. Run the setup script: `./pi-power-button/script/install`
 
