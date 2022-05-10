@@ -6,7 +6,7 @@ import time
 from time import sleep
 
 gpio_pin=3
-long_press=30
+long_press=0
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(gpio_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
