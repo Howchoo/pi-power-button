@@ -1,0 +1,11 @@
+[Unit]
+Description=Listen for shutdown service at GPIO3
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/listen-for-shutdown.py
+PIDFile=/run/listen-for-shutdown.pid
+
+[Install]
+WantedBy=multi-user.target
