@@ -1,0 +1,21 @@
+#! /bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "=> Installing shutdown listener...\n"
+sudo cp listen-for-shutdown.py /usr/local/bin/
+sudo chmod +x /usr/local/bin/listen-for-shutdown.py
+
+echo "=> Installing shutdown listener systemd service...\n"
+sudo cp listen-for-shutdown.service /etc/systemd/system/
+sudo chmod +x /etc/systemd/system/listen-for-shutdown.service
+
+echo "=> Starting shutdown listener...\n"
+sudo systemctl daemon-reload
+sudo systemctl enable listen-for-shutdown.service
+sudo systemctl start listen-for-shutdown.service
+sudo systemctl status listen-for-shutdown.service
+
+echo "Shutdown listener installed.\n"
