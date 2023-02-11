@@ -6,7 +6,7 @@ import time
 print('Raspberry PI GPIO Button & LED Shutdown Script')
 
 # Pin Definitions
-PIN_LED    = 2 # GPIO2 / Pin #3
+PIN_LED    = 4 # GPIO4 / Pin #7
 PIN_BUTTON = 3 # GPIO3 / Pin #5
 
 try:
