@@ -1,0 +1,18 @@
+#! /bin/sh
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "=> Stopping shutdown listener...\n"
+sudo systemctl stop listen-for-shutdown.service
+
+echo "=> Removing shutdown listener...\n"
+sudo systemctl disable listen-for-shutdown.service
+sudo systemctl status listen-for-shutdown.service
+sudo rm -f /etc/systemd/system/listen-for-shutdown.service
+sudo rm -f /usr/local/bin/listen-for-shutdown.py 
+
+echo "=> Reloading systemd services...\n"
+sudo systemctl daemon-reload
+echo "Shutdown listener uninstalled.\n"
